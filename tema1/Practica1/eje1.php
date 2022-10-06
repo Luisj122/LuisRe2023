@@ -1,4 +1,7 @@
 <?php
+include_once($_SERVER["DOCUMENT_ROOT"] . "/cabecera.php");
+?>
+<?php
     
 	//Inicializamos las variable y usamos rand para poder generar numeros aleatorios
 	$pimera = rand();

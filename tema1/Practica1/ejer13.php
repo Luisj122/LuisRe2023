@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    Ejercicio 2 del tema 2, sin estilos
+    
+    <?php
+
+        function addCola(&$cola, $num, $elemen){
+
+        }
+
+        $cola = array();
+
+
+    ?>
+
 </body>
 </html>

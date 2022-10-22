@@ -4,42 +4,47 @@ include_once($_SERVER["DOCUMENT_ROOT"] . "/cabecera.php");
 
 <?php
 
-    function encriptar($mensaje,$clave){
+        function encriptar($mensaje, $clave)
+        {
 
-        $encriptado = "";
-        foreach($mensaje as &$valor){
-            $encriptado = $encriptado.chr(ord($valor)+$clave);
+            $encriptado = "";
+            for ($i = 0; $i < strlen($mensaje); $i++) {
+                $encriptado = $encriptado . chr(ord($mensaje[$i]) + $clave);
+            }
+
+            return $encriptado;
         }
 
-        return $encriptado;
-       
-    }
+        function desencriptar($mensaje, $clave)
+        {
 
-    function desencriptar($mensaje,$clave){
+            $encriptado = "";
+            for ($i = 0; $i < strlen($mensaje); $i++) {
+                $encriptado = $encriptado . chr(ord($mensaje[$i]) - $clave);
+            }
 
-        $desencriptado = "";
-        foreach($mensaje as &$valor){
-            $desencriptado = $desencriptado.chr(ord($valor)-$clave);
+            return $encriptado;
         }
 
-        return $desencriptado;
-       
-    }
+        $mensaje = "prueba encriptar";
+        $array = explode(" ", $mensaje);
+        $ms = "";
+        $let = "";
 
-    $mensaje = "prueba encriptar";
-    $array = explode(" ",$mensaje);
-    
-    foreach($array as &$valor){
-        echo strrev($valor) . " ";
-    }
+        echo $mensaje . "<br>";
 
-    $clave = 3;
+        foreach ($array as &$valor) {
+            echo  strrev($valor) . " ";
+            $ms = $ms . strrev($valor) . " ";
+        }
 
-    echo "<br>";
-    $encriptado = encriptar($array,$clave);
-  
+        $clave = 3;
+        $encriptado = encriptar($ms, $clave);
 
-    echo encriptar($mensaje,$clave) . "<br>";
-  
+        echo "<br>";
+
+        echo  $encriptado . "<br>";
+        echo desencriptar($encriptado,$clave);
+
 
 ?>

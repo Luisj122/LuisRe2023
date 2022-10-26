@@ -50,7 +50,7 @@
 					</button>
 					<div class="collapse" id="tema2">
 					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					<li><a href="/tema3/cookies/index.php" class="link-dark rounded">Cookie</a></li>
+					<li><a href="/tema2/cookies/index.php" class="link-dark rounded">Cookie</a></li>
 					</ul>
 					</div>
 				</li>

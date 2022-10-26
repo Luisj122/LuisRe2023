@@ -62,7 +62,7 @@
 					</button>
 					<div class="collapse" id="tema3">
 					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					<li><a href="/tema2/PracticaLogin/login.php" class="link-dark rounded">Ejercicio Login</a></li>
+					
 					
 					</ul>
 					</div>

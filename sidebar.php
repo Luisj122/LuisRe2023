@@ -39,7 +39,7 @@
 						<li><a href="/tema1/Practica2/ejer7.php" class="link-dark rounded">Ejercicio 7</a></li>
 						<li><a href="/tema1/Practica2/ejer8.php" class="link-dark rounded">Ejercicio 8</a></li>
 
-						<li><a href="/tema1/PracticaLogin/login.php" class="link-dark rounded">Ejercicio Login</a></li>
+						
 						
 					</ul>
 					</div>

@@ -65,7 +65,7 @@ if ($_GET) {
         //echo "Cookie creada";
     } else {
         //Primera vez que entra
-        setcookie('servidor',encriptar("CreacionCookie#moda-0#deporte-0#juegos-0",5), time()+60000, "/tema3", "ejerphp.herokuapp.com", true, false);
+        setcookie('servidor',encriptar("CreacionCookie#moda-0#deporte-0#juegos-0",5), time()+60000, "/tema3", "ejerphp.herokuapp.com", false, true);
     }
 
 

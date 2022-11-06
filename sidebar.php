@@ -58,11 +58,12 @@
 			
 				<li class="mb-1">
 					<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#tema3" aria-expanded="false">
-					TEMA 3
+					Practica Login y ahoracado
 					</button>
 					<div class="collapse" id="tema3">
 					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 					<li><a href="./tema3/PracticaLogin/login.php" class="link-dark rounded">Practica Login</a></li>
+					<li><a href="./tema3/ahorcado/index.php" class="link-dark rounded">Ahorcado</a></li>
 					
 					</ul>
 					</div>

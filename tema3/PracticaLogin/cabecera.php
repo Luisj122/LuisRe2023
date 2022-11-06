@@ -63,6 +63,7 @@
                         <h6 class="collapse-header">Proyectos:</h6>
                         <a class="collapse-item" href="nuevoProyecto.php">Añadir Proyecto</a>
                         <a class="collapse-item" href='controlador.php?accion=borrarTodo' >Eliminar Proyecto</a>
+                        <a class="collapse-item" href='controlador.php?accion=enviarEmail' >Enviar Email</a>
                     </div>
                 </div>
             </li>

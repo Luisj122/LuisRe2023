@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("lib.php");
 ?>
 <?php
 header("Content-Type: text/html; charset=UTF-8");
@@ -115,5 +116,24 @@ if ($_GET) {
   
   
 }
+
+//Generar pdf
+if ($_GET) {
+  if ($_GET['accion'] == "pdf") {
+    generarPDF();
+    header("Location: proyectos.php"); 
+  }
+}
+
+//Enviar Email
+if ($_GET) {
+  if ($_GET['accion'] == "enviarEmail") {
+    generarPDF();
+    enviarEmail();
+    header("Location: email.php"); 
+  }
+}
+
+
 
 ?>

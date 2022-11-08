@@ -11,7 +11,7 @@
 			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#tema1" aria-expanded="true">
 				TEMA 1
 			</button>
-			<div class="collapse show" id="tema1">
+			<div class="collapse" id="tema1">
 				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 
 					<p>Practica 1</p>
@@ -77,7 +77,7 @@
 			</button>
 			<div class="collapse" id="tema4">
 				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					<li><a href="./tema4/PracticaLogin/login.php" class="link-dark rounded">Practica Login</a></li>
+					
 				</ul>
 			</div>
 		</li>

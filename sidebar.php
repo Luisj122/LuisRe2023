@@ -69,18 +69,17 @@
 				</ul>
 			</div>
 		</li>
-
-
 		<li class="mb-1">
 			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#tema4" aria-expanded="false">
 				Practica PDF
 			</button>
 			<div class="collapse" id="tema4">
 				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					<li><a href="/tema4/PracticaLogin/login.php" class="link-dark rounded">Practica Login</a></li>
+					<li><a href="./tema4/PracticaLogin/login.php" class="link-dark rounded">Practica Login</a></li>
 				</ul>
 			</div>
 		</li>
+
 
 		<li class="mb-1">
 			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">

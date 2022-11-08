@@ -117,22 +117,6 @@ if ($_GET) {
   
 }
 
-//Generar pdf
-if ($_GET) {
-  if ($_GET['accion'] == "pdf") {
-    generarPDF();
-    header("Location: proyectos.php"); 
-  }
-}
-
-//Enviar Email
-if ($_GET) {
-  if ($_GET['accion'] == "enviarEmail") {
-    generarPDF();
-    enviarEmail();
-    header("Location: email.php"); 
-  }
-}
 
 
 

@@ -7,7 +7,7 @@
     
                 try {
                     //LOCALHOST
-                    $dsn = "mysql:host={$host};port=3306;dbname={$bd}";            
+                    $dsn = "mysql:host={$host};port=3307;dbname={$bd}";            
                     self::$conexion = new PDO($dsn, $usuario, $password);
             
                     self::$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);

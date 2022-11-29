@@ -5,7 +5,7 @@ class VistaPrestamos{
 
   public static function render($prestamos)
   {
-    include_once("./estilos/cabecera.php");
+    include_once("../estilos/cabecera.php");
 
     echo "<table class='table table-striped '>";
 
@@ -96,7 +96,7 @@ class VistaPrestamos{
     
     echo "</tbody>";
     echo "</table>";
-    include_once("./estilos/pie.php");
+    include_once("../estilos/pie.php");
   }
 }
 ?>

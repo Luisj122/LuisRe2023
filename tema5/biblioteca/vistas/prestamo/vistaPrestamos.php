@@ -1,6 +1,6 @@
 <?php
 
-class VistaPrestamos{
+class vistaPrestamos{
 
 
   public static function render($prestamos)

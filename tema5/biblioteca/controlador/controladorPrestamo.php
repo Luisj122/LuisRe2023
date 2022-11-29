@@ -8,7 +8,7 @@
             $prestamos = prestamoBD::getPrestamo();
 
             //Llamar a una vista para pintar esas películas
-            VistaPrestamos::render($prestamos);
+            vistaPrestamos::render($prestamos);
         }
 
 
@@ -21,7 +21,7 @@
         public static function mostrarFormularioNuevaPrestamo() {
             $libros =  libroBD::getLibros();
             $usuarios = usuarioBD::getUsuarios();
-            VistaFormularioNuevoPrestamo::render($libros, $usuarios);
+            vistaFormularioNuevoPrestamo::render($libros, $usuarios);
         }
 
         public static function insertarPrestamo($prestamo) {
@@ -42,7 +42,7 @@
         public static function buscarDni($dni) {
             
             $bdni = prestamoBD::buscarPrestamos($dni);
-            VistaPrestamosDni::renderDni($bdni);
+            vistaPrestamosDni::renderDni($bdni);
 
             
         }
@@ -50,7 +50,7 @@
         public static function buscarEstado($estado) {
             
             $bestado = prestamoBD::buscarEstado($estado);
-            VistaPrestamosEstado::renderEstado($bestado);
+            vistaPrestamosEstado::renderEstado($bestado);
 
             
         }

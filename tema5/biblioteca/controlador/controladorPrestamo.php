@@ -21,7 +21,7 @@
         public static function mostrarFormularioNuevaPrestamo() {
             $libros =  libroBD::getLibros();
             $usuarios = usuarioBD::getUsuarios();
-            vistaFormularioNuevoPrestamo::render($libros, $usuarios);
+            VistaFormularioNuevoPrestamo::render($libros, $usuarios);
         }
 
         public static function insertarPrestamo($prestamo) {
@@ -42,7 +42,7 @@
         public static function buscarDni($dni) {
             
             $bdni = prestamoBD::buscarPrestamos($dni);
-            vistaPrestamosDni::renderDni($bdni);
+            VistaPrestamosDni::renderDni($bdni);
 
             
         }
@@ -50,7 +50,7 @@
         public static function buscarEstado($estado) {
             
             $bestado = prestamoBD::buscarEstado($estado);
-            vistaPrestamosEstado::renderEstado($bestado);
+            VistaPrestamosEstado::renderEstado($bestado);
 
             
         }

@@ -8,8 +8,7 @@
             $prestamos = prestamoBD::getPrestamo();
 
             //Llamar a una vista para pintar esas películas
-            vistaPrestamos::render($prestamos);
-           
+            VistaPrestamos::render($prestamos);
         }
 
 
@@ -43,7 +42,7 @@
         public static function buscarDni($dni) {
             
             $bdni = prestamoBD::buscarPrestamos($dni);
-            vistaPrestamosDni::renderDni($bdni);
+            VistaPrestamosDni::renderDni($bdni);
 
             
         }
@@ -51,7 +50,7 @@
         public static function buscarEstado($estado) {
             
             $bestado = prestamoBD::buscarEstado($estado);
-            vistaPrestamosEstado::renderEstado($bestado);
+            VistaPrestamosEstado::renderEstado($bestado);
 
             
         }

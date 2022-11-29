@@ -1,6 +1,6 @@
 <?php
 
-class vistaPrestamosDni{
+class VistaPrestamosDni{
 
 
   public static function renderDni($prestamosD){

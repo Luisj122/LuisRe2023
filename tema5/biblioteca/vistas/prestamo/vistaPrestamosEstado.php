@@ -1,6 +1,6 @@
 <?php
 
-class vistaPrestamosEstado{
+class VistaPrestamosEstado{
 
 
   public static function renderEstado($prestamosD){

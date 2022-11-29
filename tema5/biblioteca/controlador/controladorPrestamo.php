@@ -8,7 +8,7 @@
             $prestamos = prestamoBD::getPrestamo();
 
             //Llamar a una vista para pintar esas películas
-            VistaPrestamos::render($prestamos);
+            vistaPrestamos::render($prestamos);
            
         }
 

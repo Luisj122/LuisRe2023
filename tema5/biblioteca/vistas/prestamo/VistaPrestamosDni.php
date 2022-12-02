@@ -4,7 +4,7 @@ class VistaPrestamosDni{
 
 
   public static function renderDni($prestamosD){
-    include_once("./estilos/cabecera.php");
+    include_once("./cabecera.php");
 
    
     echo "<table class='table table-striped '>";
@@ -75,6 +75,6 @@ class VistaPrestamosDni{
     echo "</tbody>";
     echo "</table>";
     echo '</form>';
-    include_once("./estilos/pie.php");
+    include_once("./pie.php");
   }
 }

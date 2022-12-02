@@ -4,7 +4,7 @@ class VistaPrestamosEstado{
 
 
   public static function renderEstado($prestamosD){
-    include_once("./estilos/cabecera.php");
+    include_once(".cabecera.php");
 
    
     
@@ -73,6 +73,6 @@ echo "<input type='hidden' name='idPrestamo' class='form-control form-control-us
     echo "</tbody>";
     echo "</table>";
     echo '</form>';
-    include_once("./estilos/pie.php");
+    include_once("./pie.php");
   }
 }

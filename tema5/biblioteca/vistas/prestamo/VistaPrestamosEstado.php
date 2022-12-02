@@ -22,7 +22,7 @@ class VistaPrestamosEstado{
     echo "</thead>";
     echo "<tbody>";
     
-    echo '<a href="enrutador.php?accion=insertar" type="button" class="float-right  btn btn-sm btn-outline-secondary">insertar</a>';     foreach ($prestamosD as   $value) {
+    foreach ($prestamosD as   $value) {
 
       echo "<tr>";
       echo "<td>" . $value->getIdLibro() . "</td>";

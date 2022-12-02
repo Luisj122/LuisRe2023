@@ -25,10 +25,10 @@
         }
 
         public static function insertarPrestamo($prestamo) {
-            $prestamo = new Prestamo($prestamo["idLibro"],$prestamo["idUsuario"],$prestamo["fecha_i"],$prestamo["fecha_f"],$prestamo["estado"]);
+            $prestamo = new prestamo($prestamo["idLibro"],$prestamo["idUsuario"],$prestamo["fecha_i"],$prestamo["fecha_f"],$prestamo["estado"]);
             prestamoBD::insertarPrestamos($prestamo);
-
             echo '<script>window.location="'."index.php".'"</script>';
+      
         }
 
         public static function editarPrestamo($id,$fechaF,$estado) {

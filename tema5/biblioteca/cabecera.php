@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>Biblioteca</title>
 
     <!-- Custom fonts for this template-->
     <link href="./estilos/estilos/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -62,18 +62,12 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Proyectos</span>
+
+                <a class="nav-link collapsed" href="enrutador.php?accion=insertar"
+                    aria-expanded="true" >
+                    <span>Añadir Prestamo</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Proyectos:</h6>
-                        <a class="collapse-item" href="nuevoProyecto.php">Añadir Proyecto</a>
-                        <a class="collapse-item" href='controlador.php?accion=borrarTodo' >Eliminar Proyecto</a>
-                    </div>
-                </div>
+                
             </li>
 
          
@@ -122,7 +116,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                
                                 <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                    src="./estilos/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

@@ -49,13 +49,13 @@ class VistaPrestamosEstado{
                 delete
                 </span></a>*/
 
-echo "<input type='hidden' name='idPrestamo' class='form-control form-control-user'
-      id='' value='" . $value->getId() . "'>";  
+      echo "<input type='hidden' name='idPrestamo' class='form-control form-control-user'
+              id='' value='" . $value->getId() . "'>";  
 
-      echo '<td><input type="hidden" name="accion" value="editar">
-      <button type="submit" class="btn btn-sm btn-outline-secondary">
-          Actualizar
-      </button>';
+              echo '<td><input type="hidden" name="accion" value="editar">
+              <button type="submit" class="btn btn-sm btn-outline-secondary">
+                  Actualizar
+              </button>';
       
 
       echo '<a href="enrutador.php?accion=borrar&id=' . $value->getId() . '" type="button" class="btn btn-sm btn-outline-secondary">borrar</a></td></div>';

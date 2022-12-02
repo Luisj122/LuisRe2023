@@ -4,7 +4,7 @@ class VistaFormularioNuevoPrestamo{
 
 
   public static function render($libros, $usuarios){
-    include_once("./estilos/cabecera.php");
+    include_once("./cabecera.php");
 
     echo '<body class="bg-gradient-primary">
 
@@ -89,7 +89,7 @@ class VistaFormularioNuevoPrestamo{
   </body>';
         
 
-    include_once("./estilos/pie.php");
+    include_once("./pie.php");
   }
 }
 ?>

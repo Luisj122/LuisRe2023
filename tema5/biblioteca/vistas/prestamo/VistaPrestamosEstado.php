@@ -4,7 +4,7 @@ class VistaPrestamosEstado{
 
 
   public static function renderEstado($prestamosD){
-    include_once(".cabecera.php");
+    include_once("./cabecera.php");
 
    
     

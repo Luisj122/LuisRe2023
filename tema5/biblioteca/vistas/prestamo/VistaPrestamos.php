@@ -38,6 +38,7 @@ class VistaPrestamos{
     echo "<tr>";
     echo "<th>Id Libro</th>";
     echo "<th>Id Usuario</th>";
+    echo "<th>Dni</th>";
     echo "<th>Fecha Inicio</th>";
     echo "<th>Fecha Fin</th>";
     echo "<th>Estado</th>";
@@ -52,6 +53,7 @@ class VistaPrestamos{
       echo "<tr class='text-dark'>";
       echo "<td>" . $value->getIdLibro() . "</td>";
       echo "<td>" . $value->getIdUsuario() . "</td>";
+      echo "<td>" . $value->dni . "</td>";
       echo "<td>" . $value->getFecha_i() . "</td>";
 
 

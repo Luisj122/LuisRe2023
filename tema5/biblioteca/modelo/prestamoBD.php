@@ -6,7 +6,7 @@
             $conexion = conexionBD::conectar();
 
             //Consulta BBDD
-            $stmt = $conexion->prepare("SELECT prestamos.id, prestamos.idLibro, prestamos.idUsuario, prestamos.fecha_i, prestamos.fecha_f, prestamos.estado, usuarios.nombre FROM prestamos join usuarios join libros WHERE prestamos.idUsuario = usuarios.id and libros.id = prestamos.idLibro");
+            $stmt = $conexion->prepare("SELECT prestamos.id, prestamos.idLibro, prestamos.idUsuario, prestamos.fecha_i, prestamos.fecha_f, prestamos.estado, usuarios.nombre, usuarios.dni FROM prestamos join usuarios join libros WHERE prestamos.idUsuario = usuarios.id and libros.id = prestamos.idLibro");
 
             $stmt->execute();
 

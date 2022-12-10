@@ -95,11 +95,11 @@
 
 		<li class="mb-1">
 			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#tema6" aria-expanded="false">
-				Tema 6
+				Regalos
 			</button>
 			<div class="collapse" id="tema6">
 				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					<li><a href="./tema4/ejer1.php" class="link-dark rounded">Ejercicio clase</a></li>
+					<li><a href="./tema6/regalos/index.php	" class="link-dark rounded">Ejercicio clase</a></li>
 				</ul>
 			</div>
 		</li>

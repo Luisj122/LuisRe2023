@@ -8,7 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 
 function generarPDF(){
             //Load Composer's autoloader
-            require '../../vendor/autoload.php';
+            require '../vendor/autoload.php';
 
             // create new PDF document
 

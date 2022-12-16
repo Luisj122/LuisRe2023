@@ -1,4 +1,5 @@
 <?php
+session_start();
     
     //AUTOLOAD
     function autocarga($clase){ 
@@ -12,7 +13,12 @@
             include_once $ruta; 
         }
 
-        $ruta = "./vistas/prestamo/$clase.php"; 
+        $ruta = "./usuario/$clase.php"; 
+        if (file_exists($ruta)){ 
+            include_once $ruta; 
+        }
+
+        $ruta = "./vistas/regalo/$clase.php"; 
         if (file_exists($ruta)){ 
             include_once $ruta; 
         }
@@ -26,6 +32,8 @@
         if (file_exists($ruta)){ 
             include_once $ruta; 
         }
+
+        
     } 
     spl_autoload_register("autocarga");
 
@@ -42,35 +50,66 @@
         if (isset($_REQUEST['accion'])) {
 
 
-             //Inicio
-             if ($_REQUEST['accion'] == "inicio") {
+            //Inicio
+            if ($_REQUEST['accion'] == "inicio") {
                 controladorRegalo::mostrarLogin();
             }
 
-            //Borrar prestamo
+            //Login
+            if($_REQUEST['accion'] == "login") {
+                $email = filtrado($_REQUEST['email']);
+                $password = filtrado($_REQUEST['password']);
+
+                controladorRegalo::login($email, $password);
+            }
+
+            //regalo
+            if($_REQUEST['accion'] == "regaloU"){
+                $id = unserialize($_SESSION['usuario'])->getId();
+                controladorRegalo::mostrarRegalosU($id);
+            }
+
+            //generarPDF
+            if($_REQUEST['accion'] == "generarPDF"){
+                $id = unserialize($_SESSION['usuario'])->getId();
+                controladorRegalo::GenerarPdf($id);
+            }
+
+            //Borrar regalo
             if ($_REQUEST['accion'] == "borrar") {
                 $id = filtrado($_REQUEST['id']);
-                controladorRegalo::borrarPrestamo($id);
+                controladorRegalo::borrarRegalo($id);
             }
 
-            //formulario prestamo
-            if ($_REQUEST['accion'] == "insertar") {
-               controladorRegalo::mostrarFormularioNuevaPrestamo();   
-            }
 
-            //insertar prestamo
+            //insertar regalo
             if ($_REQUEST['accion'] == "insertarP") {
                 $regalo["nombre"]=filtrado($_REQUEST["nombre"]);
                 $regalo["destinatario"]=filtrado($_REQUEST["destinatario"]);
                 $regalo["precio"]=filtrado($_REQUEST["precio"]);
                 $regalo["estado"]=filtrado($_REQUEST["estado"]);
                 $regalo["anio"]=filtrado($_REQUEST["anio"]);
-                $regalo["usuario"]=filtrado($_REQUEST["usuario"]);
+                $regalo["usuario"]= filtrado($_REQUEST["idUsuario"]);
     
                 controladorRegalo::insertarRegalos($regalo);   
             }
 
-             //editar prestamo
+            //insertar enlace
+            if ($_REQUEST['accion'] == "insertarE") {
+                $enlace["nombre"]=filtrado($_REQUEST["nombre"]);
+                $enlace["enlace"]=filtrado($_REQUEST["enlace"]);
+                $enlace["precio"]=filtrado($_REQUEST["precio"]);
+                $enlace["imagen"]=filtrado($_REQUEST["imagen"]);
+                $enlace["prioridad"]=filtrado($_REQUEST["prioridad"]);
+                $enlace["regalo"]= filtrado($_REQUEST["idRegalo"]);
+    
+                controladorEnlace::insertarEnlace($enlace);   
+      
+
+
+            }
+
+             //editar regalo
             if ($_REQUEST['accion'] == "editar") {
                 $id=filtrado($_REQUEST["idRegalo"]);
                 $nombre=filtrado($_REQUEST["nombre"]);
@@ -81,7 +120,7 @@
                 $idUsuario=filtrado($_REQUEST["idUsuario"]);
 
     
-                controladorRegalo::editarPrestamo($id,$nombre,$destinatario, $precio, $estado, $anio, $idUsuario);   
+                controladorRegalo::editarRegalo($id,$nombre,$destinatario, $precio, $estado, $anio, $idUsuario);   
             }
 
             //buscar año
@@ -91,6 +130,44 @@
                 controladorRegalo::buscarAnio($anio);   
             }
 
+            //enlace
+            if ($_REQUEST['accion'] == "enlace") {
+                $id=filtrado($_REQUEST["id"]);
+    
+                controladorRegalo::mostrarEnlace($id);   
+            }
+
+            //enlace
+            if ($_REQUEST['accion'] == "enlaceR") {
+                $id=filtrado($_REQUEST["idRegalo"]);
+    
+                controladorRegalo::mostrarEnlace($id);  
+
+            }
+
+            //borrar enlace
+            if ($_REQUEST['accion'] == "eliminarE") {
+                $id=filtrado($_REQUEST["id"]);
+                $idR=filtrado($_REQUEST["idRegalo"]);
+                controladorEnlace::eliminarEnlace($id, $idR);   
+                                
+            }
+
+            //enlace ascendente
+            if ($_REQUEST['accion'] == "ascendente") {  
+                                
+                $idR=filtrado($_REQUEST["id"]);
+                controladorEnlace::ordenarAscendente($idR); 
+        
+            }
+
+            //enlace descendente
+            if ($_REQUEST['accion'] == "descendente") {  
+                                
+                $idR=filtrado($_REQUEST["id"]);
+                controladorEnlace::ordenarDescendente($idR); 
+          
+            }
 
         }
     }

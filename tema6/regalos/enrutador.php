@@ -13,22 +13,8 @@ session_start();
             include_once $ruta; 
         }
 
-        $ruta = "./usuario/$clase.php"; 
-        if (file_exists($ruta)){ 
-            include_once $ruta; 
-        }
 
         $ruta = "./vistas/regalo/$clase.php"; 
-        if (file_exists($ruta)){ 
-            include_once $ruta; 
-        }
-
-        $ruta = "./vistas/criticas/$clase.php"; 
-        if (file_exists($ruta)){ 
-            include_once $ruta; 
-        }
-
-        $ruta = "./vistas/usuarios/$clase.php"; 
         if (file_exists($ruta)){ 
             include_once $ruta; 
         }

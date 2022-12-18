@@ -52,7 +52,7 @@
 
         public static function login($email, $password){
             $usuario = null;
-            $codigo = usuarioBD::checkLogin($email,$password, $usuario);
+            $codigo = usuarioBD::chequearLogin($email,$password, $usuario);
 
             if ($codigo == 1) {
                 echo "<script>window.location='enrutador.php?accion=error&codigo=1'</script>";

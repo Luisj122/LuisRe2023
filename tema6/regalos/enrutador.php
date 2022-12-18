@@ -51,7 +51,7 @@ session_start();
 
             //regalo
             if($_REQUEST['accion'] == "regaloU"){
-                $id = (unserialize($_SESSION['usuario'])->getId());
+                $id = unserialize($_SESSION['usuario'])->getId();
                 controladorRegalo::mostrarRegalosU($id);
             }
 

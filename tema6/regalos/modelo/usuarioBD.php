@@ -4,7 +4,7 @@
 
         public static function getUsuarios() {
 
-            $conexion = ConexionBD::conectar();
+            $conexion = conexionBD::conectar();
 
             //Consulta BBDD
             $stmt = $conexion->prepare("SELECT * FROM usuarios");
@@ -20,7 +20,7 @@
         }
         
         public static function chequearLogin($email, $password, &$usuario) {
-            $conexion = ConexionBD::conectar();
+            $conexion = conexionBD::conectar();
             
             $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE email = ? AND password = ?");
             $stmt->bindValue(1, $email);
@@ -37,7 +37,7 @@
                 return 0;
             } else {
                 //Usuario existe y password correcto 
-                ConexionBD::cerrar();
+                conexionBD::cerrar();
                 return 2;
             }
         }

@@ -10,7 +10,7 @@
 
             $stmt->execute();
 
-            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'regalo');
+            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Regalo');
             //Usamos FETCH_CLASS para que convierta a objetos las filas de la BD
             
             $regalo = $stmt->fetchAll();
@@ -29,7 +29,7 @@
             $stmt->bindValue(1, $id);
             $stmt->execute();
 
-            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'regalo');
+            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Regalo');
             //Usamos FETCH_CLASS para que convierta a objetos las filas de la BD
             
             $regalo = $stmt->fetchAll();
@@ -48,7 +48,7 @@
             $stmt->bindValue(1, $id);
             $stmt->execute();
 
-            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'regalo');
+            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Regalo');
             //Usamos FETCH_CLASS para que convierta a objetos las filas de la BD
             
             $regalo = $stmt->fetch();
@@ -105,7 +105,7 @@
             $stmt->bindValue(1, $anio);
             $stmt->execute();
 
-            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'regalo');
+            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Regalo');
             
             //Usamos FETCH_CLASS para que convierta a objetos las filas de la BD
             

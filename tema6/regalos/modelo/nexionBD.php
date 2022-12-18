@@ -1,6 +1,6 @@
         <?php
 
-        class ConexionBD{
+        class conexionBD{
             private static $conexion;
 
             public static function conectar($bd="listaRegalos", $usuario="root", $password="toor", $host="mariadb") {

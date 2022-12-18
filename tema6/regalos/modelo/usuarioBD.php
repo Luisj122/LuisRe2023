@@ -27,7 +27,7 @@
             $stmt->bindValue(1, $email);
             $stmt->execute();
 
-            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Usuario');
+            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'usuario');
             $usuario = $stmt->fetch();
 
             $filas = $stmt->rowCount();
@@ -42,7 +42,7 @@
                 $stmt->bindValue(2, $password);
                 $stmt->execute();
     
-                $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Usuario');
+                $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'usuario');
                 $usuario = $stmt->fetch();
 
                 $filas = $stmt->rowCount();

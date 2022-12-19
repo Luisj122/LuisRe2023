@@ -15,7 +15,7 @@ function autocarga($clase)
     }
 
 
-    $ruta = "./vistas/regalo/$clase.php";
+    $ruta = "./vistas/padalea/$clase.php";
     if (file_exists($ruta)) {
         include_once $ruta;
     }

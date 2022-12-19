@@ -104,5 +104,15 @@
 			</div>
 		</li>
 
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Padelea" aria-expanded="false">
+				Examen Padelea
+			</button>
+			<div class="collapse" id="Padelea">
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a href="./examenPadelea/Padelea/index.php	" class="link-dark rounded">Padelea</a></li>
+				</ul>
+			</div>
+		</li>
 	</ul>
 </div>

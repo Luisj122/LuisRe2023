@@ -48,6 +48,11 @@ session_start();
 
                 controladorRegalo::login($email, $password);
             }
+            if($_REQUEST['accion'] == "salir") {
+                
+                session_destroy();
+                controladorRegalo::mostrarLogin();
+            }
 
             //regalo
             if($_REQUEST['accion'] == "regaloU"){

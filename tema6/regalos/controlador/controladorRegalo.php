@@ -55,12 +55,12 @@
             $codigo = usuarioBD::chequearLogin($email,$password, $usuario);
 
             if ($codigo == 1) {
-                echo "<script>window.location='enrutador.php?accion=error&codigo=1'</script>";
-            } else {
-                //Usuario correcto 
                 $_SESSION['usuario'] = serialize($usuario);
                 echo "<script>window.location='enrutador.php?accion=regaloU'</script>";
-
+            } else {
+                //Usuario correcto 
+                VistaLoginError::mostrarLoginError();
+                
             }
         }
 
@@ -86,7 +86,7 @@
             // set document information
             $pdf->setCreator(PDF_CREATOR);
             $pdf->setAuthor('Luis Jimenez');
-            $pdf->setTitle('Proyectos');
+            $pdf->setTitle('Regalos');
             $pdf->setSubject('TCPDF Tutorial');
             $pdf->setKeywords('TCPDF, PDF, example, test, guide');
 

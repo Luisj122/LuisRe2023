@@ -38,7 +38,7 @@
             } else {
                 //Usuario existe y password correcto 
                 conexionBD::cerrar();
-                return 2;
+                return 1;
             }
         }
 

@@ -4,7 +4,7 @@
 
         use MongoDB\Client;
 
-        class conexionBD
+        class ConexionBD
         {
             private static $conexion;
 

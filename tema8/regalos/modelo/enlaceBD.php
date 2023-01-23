@@ -71,45 +71,6 @@ class enlaceBD
     }
 
 
-    public static function ordenarAscendente($id)
-    {
-        $conexion = conexionBD::conectar();
 
-        $stmt = $conexion->prepare("SELECT id, nombre, enlaces, precio, imagen, prioridad, idRegalo
-            from enlaces where idRegalo = ? order by precio asc");
-
-        $stmt->bindValue(1, $id);
-        $stmt->execute();
-
-        $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'enlace');
-        //Usamos FETCH_CLASS para que convierta a objetos las filas de la BD
-
-        $enlace = $stmt->fetchAll();
-
-
-        conexionBD::cerrar();
-
-        return $enlace;
-    }
-
-    public static function ordenarDescendente($id)
-    {
-        $conexion = conexionBD::conectar();
-
-        $stmt = $conexion->prepare("SELECT id, nombre, enlaces, precio, imagen, prioridad, idRegalo
-            from enlaces where idRegalo = ? order by precio desc");
-
-        $stmt->bindValue(1, $id);
-        $stmt->execute();
-
-        $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'enlace');
-        //Usamos FETCH_CLASS para que convierta a objetos las filas de la BD
-
-        $enlace = $stmt->fetchAll();
-
-
-        conexionBD::cerrar();
-
-        return $enlace;
-    }
+ 
 }

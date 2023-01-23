@@ -14,7 +14,7 @@
                 try {
                     //LOCALHOST
                     //$host = "mongodb+srv://admin:evhT1Hu8ZasF8llx@cluster0.afrk872.mongodb.net/?retryWrites=true&w=majority";
-                    $host = "mongodb://root:toor@mongo:27017/"; //MongoDB en Docker
+                    $host = "mongodb://root:toor@54.164.95.76:27017/"; //MongoDB en Docker
                     self::$conexion = (new Client($host))->{$bd};
                 } catch (PDOException $e) {
                     echo $e->getMessage();

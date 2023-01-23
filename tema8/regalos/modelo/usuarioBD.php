@@ -11,7 +11,7 @@
 
             $usuario = $coleccion->findOne(['email' => $email, 'password' => $password]);
 
-            $usuarioOBJ = new Usuario($usuario['email'], $usuario['password']);
+            $usuarioOBJ = new usuario($usuario['email'], $usuario['password']);
             $usuarioOBJ->setId($usuario['id']);
 
             //Si no me devuelve ninguna fila el password es incorrecto

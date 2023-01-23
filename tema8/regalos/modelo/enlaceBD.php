@@ -15,7 +15,7 @@ class enlaceBD
         //Crear los objetos para devolverlos (MVC), Mongo me devuelve array asociativo
         $enlaces = array();
         foreach ($cursor as $enlace) {
-            $enlaceOBJ = new Enlace($enlace['id'], $enlace['nombre'], $enlace['enlaces'], $enlace['precio'], $enlace['imagen'], $enlace['prioridad'], $enlace['idRegalo']);
+            $enlaceOBJ = new enlace($enlace['id'], $enlace['nombre'], $enlace['enlaces'], $enlace['precio'], $enlace['imagen'], $enlace['prioridad'], $enlace['idRegalo']);
             array_push($enlaces, $enlaceOBJ);
         }
 

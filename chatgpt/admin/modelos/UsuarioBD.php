@@ -4,7 +4,7 @@
         
         public static function chequearLogin($email, $password, &$usuarioOBJ) {
 
-            $conexion = conexionBD::conectar();
+            $conexion = ConexionBD::conectar();
             
             $coleccion = $conexion->usuarios;
 

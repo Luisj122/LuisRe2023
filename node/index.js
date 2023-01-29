@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const app = require('./app')
 const port = 3000
-const urlMongo = "mongodb+srv://luisjimenez:LSAME2EBmbsIGYtk@cluster0.afrk872.mongodb.net/test";
+const urlMongo = "mongodb+srv://luisjimenez:Pv0HclAHoO7t7ae4@cluster0.afrk872.mongodb.net/test";
 
 mongoose.set('strictQuery', false);
 

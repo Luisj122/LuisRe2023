@@ -136,5 +136,16 @@
 				</ul>
 			</div>
 		</li>
+
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#chat" aria-expanded="false">
+				ChatGpt
+			</button>
+			<div class="collapse" id="chat">
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a href="./chatgpt/index.php">Chatgpt</a></li>
+				</ul>
+			</div>
+		</li>
 	</ul>
 </div>

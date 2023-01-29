@@ -29,5 +29,7 @@
         public static function renderArticulo($articulo){
             ApiChatgpt::render($articulo);
         }
+
+        
         
     }
